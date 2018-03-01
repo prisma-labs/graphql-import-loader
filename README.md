@@ -11,19 +11,47 @@ Webpack loader for [`graphql-import`](https://github.com/graphcool/graphql-impor
 yarn add --dev graphql-import-loader
 ```
 
-Add the following to the `rules` section in your `webpack.config.js`
-
-```js
-    rules: [{
-      exclude: /node_modules/,
-      test: /\.graphql$/,
-      use: [{ loader: 'graphql-import-loader' }]
-    }],
-```
-
 ## Usage
 
-You can now `require` or `import` `.graphql` files (resolved as strings) in your application:
+Resolve GraphQL file import statements as a string. See the tests for more details
+
+```graphql
+# import { A } from 'src/schema/a.graphql'
+# import { B } from 'src/schema/b.graphql'
+# import { C D } from 'src/schema/cd.graphql'
+
+type Complex  {
+  id: ID!
+  a: A!
+  b: B!
+  c: C!
+  d: D!
+}
+```
+
+```js
+import typeDefs from './schema.graphql'
+```
+
+```js
+// webpack.config.js
+
+module.exports = {
+  module: {
+    rules: [
+      {
+        exclude: /node_modules/,
+        test: /\.graphql$/,
+        use: [{ loader: 'graphql-import-loader' }]
+      }
+    ]
+  }
+}
+```
+
+## Examples
+
+Simple Server:
 
 ```ts
 import { GraphQLServer } from 'graphql-yoga'
@@ -33,3 +61,8 @@ import typeDefs from './schema.graphql'
 const server = new GraphQLServer({ typeDefs, resolvers })
 server.start(() => console.log('Server running on :4000'))
 ```
+
+
+Advanced:
+
+[serverless-prisma](https://github.com/jgeschwendt/serverless-prisma): Serverless starter kit using Prisma (early-stages)

@@ -1,0 +1,4 @@
+type Simple {
+  id: ID!
+  value: String
+}

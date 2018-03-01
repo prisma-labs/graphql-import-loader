@@ -1,6 +1,9 @@
 import { importSchema } from 'graphql-import'
 
-export default source => {
-  this.value = source
-  return `module.exports = \`${importSchema(source)}\``
+export default function(source) {
+  const callback = this.async();
+
+  this.cacheable()
+
+  callback(null, `module.exports = \`${importSchema(source)}\``)
 }
