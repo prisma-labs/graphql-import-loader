@@ -11,8 +11,6 @@ Webpack loader for [`graphql-import`](https://github.com/graphcool/graphql-impor
 yarn add --dev graphql-import-loader
 ```
 
-## Usage
-
 Add the following to the `rules` section in your `webpack.config.js`
 
 ```js
@@ -21,4 +19,17 @@ Add the following to the `rules` section in your `webpack.config.js`
       test: /\.graphql$/,
       use: [{ loader: 'graphql-import-loader' }]
     }],
+```
+
+## Usage
+
+You can now `require` or `import` `.graphql` files (resolved as strings) in your application:
+
+```ts
+import { GraphQLServer } from 'graphql-yoga'
+import resolvers from './resolvers'
+import typeDefs from './schema.graphql'
+
+const server = new GraphQLServer({ typeDefs, resolvers })
+server.start(() => console.log('Server running on :4000'))
 ```
