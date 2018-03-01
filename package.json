@@ -1,0 +1,36 @@
+{
+  "name": "graphql-import-loader",
+  "version": "0.0.0-semantic-release",
+  "main": "dist/src/index.js",
+  "typings": "./dist/src/index.d.ts",
+  "files": [
+    "dist"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/graphcool/graphql-import-loader.git"
+  },
+  "keywords": [
+    "graphql",
+    "import",
+    "webpack",
+    "loader",
+    "module"
+  ],
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/graphcool/graphql-import-loader/issues"
+  },
+  "homepage": "https://github.com/graphcool/graphql-import-loader",
+  "scripts": {
+    "prepare": "npm run build",
+    "build": "rm -rf dist && tsc -d",
+    "test": "npm run build"
+  },
+  "devDependencies": {
+    "typescript": "2.7.2"
+  },
+  "dependencies": {
+    "graphql-import": "^0.4.5"
+  }
+}
