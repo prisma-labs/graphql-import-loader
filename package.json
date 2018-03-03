@@ -25,12 +25,20 @@
   "scripts": {
     "prepare": "npm run build",
     "build": "rm -rf dist && tsc -d",
-    "test": "npm run build"
-  },
-  "devDependencies": {
-    "typescript": "2.7.2"
+    "pretest": "npm run build",
+    "test": "jest"
   },
   "dependencies": {
     "graphql-import": "^0.4.5"
+  },
+  "devDependencies": {
+    "@types/jest": "^22.1.4",
+    "@types/node": "^9.4.6",
+    "ts-jest": "^22.4.1",
+    "graphql": "^0.13.1",
+    "jest": "^22.4.2",
+    "memory-fs": "^0.4.1",
+    "typescript": "^2.7.2",
+    "webpack": "^4.0.1"
   }
 }

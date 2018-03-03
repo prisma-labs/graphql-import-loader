@@ -1,0 +1,11 @@
+# import { A } from 'test/fixtures/a.graphql'
+# import { B } from 'test/fixtures/b.graphql'
+# import { C D } from 'test/fixtures/cd.graphql'
+
+type Complex  {
+  id: ID!
+  a: A!
+  b: B!
+  c: C!
+  d: D!
+}

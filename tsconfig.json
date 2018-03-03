@@ -10,5 +10,9 @@
     "outDir": "dist",
     "lib": ["es2015"]
   },
-  "exclude": ["node_modules"]
+  "exclude": [
+    "dist",
+    "node_modules",
+    "test"
+  ]
 }
