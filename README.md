@@ -18,7 +18,7 @@ Resolve GraphQL file import statements as a string. See the tests for more detai
 ```graphql
 # import { A } from 'src/schema/a.graphql'
 # import { B } from 'src/schema/b.graphql'
-# import { C D } from 'src/schema/cd.graphql'
+# import { C, D } from 'src/schema/cd.graphql'
 
 type Complex  {
   id: ID!
