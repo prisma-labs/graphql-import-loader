@@ -28,17 +28,19 @@
     "pretest": "npm run build",
     "test": "jest"
   },
-  "dependencies": {
-    "graphql-import": "^0.4.5"
-  },
+  "dependencies": {},
   "devDependencies": {
     "@types/jest": "^22.1.4",
     "@types/node": "^9.4.6",
-    "ts-jest": "^22.4.1",
     "graphql": "^0.13.1",
+    "graphql-import": "^0.4.5",
     "jest": "^22.4.2",
     "memory-fs": "^0.4.1",
+    "ts-jest": "^22.4.1",
     "typescript": "^2.7.2",
-    "webpack": "^4.0.1"
+    "webpack": "^4.1.0"
+  },
+  "peerDependencies": {
+    "graphql-import": "^0.3.0"
   }
 }
