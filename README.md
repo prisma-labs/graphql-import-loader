@@ -8,7 +8,7 @@ Webpack loader for [`graphql-import`](https://github.com/graphcool/graphql-impor
 ## Install
 
 ```console
-yarn add --dev graphql-import-loader
+yarn add --dev graphql-import graphql-import-loader
 ```
 
 ## Usage

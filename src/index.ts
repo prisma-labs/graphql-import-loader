@@ -5,5 +5,5 @@ export default function(source) {
 
   this.cacheable()
 
-  callback(null, `module.exports = \`${importSchema(source)}\``)
+  callback(null, `module.exports = \`${importSchema(source).replace(/`/g, '\\`')}\``)
 }
