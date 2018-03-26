@@ -14,6 +14,9 @@ const complex = `module.exports = \`type Complex {
   d: D!
 }
 
+"""
+Comment with escaped \\\`backticks\\\`
+"""
 type A {
   id: ID!
   valueA: String

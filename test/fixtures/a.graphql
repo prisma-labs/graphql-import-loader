@@ -1,3 +1,6 @@
+"""
+Comment with escaped `backticks`
+"""
 type A {
   id: ID!
   valueA: String
