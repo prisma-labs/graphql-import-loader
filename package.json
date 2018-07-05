@@ -37,7 +37,7 @@
     "ts-jest": "^22.4.1",
     "graphql": "^0.13.1",
     "jest": "^22.4.2",
-    "memory-fs": "^0.4.1",
+    "memory-fs": "0.4.1",
     "typescript": "^2.7.2",
     "webpack": "^4.0.1"
   }
