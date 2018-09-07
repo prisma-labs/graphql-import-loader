@@ -29,7 +29,7 @@
     "test": "jest"
   },
   "dependencies": {
-    "graphql-import": "^0.4.5"
+    "graphql-import": "^0.7.0"
   },
   "devDependencies": {
     "@types/jest": "^22.1.4",
