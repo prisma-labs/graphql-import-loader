@@ -1,6 +1,6 @@
-# import { A } from 'test/fixtures/a.graphql'
-# import { B } from 'test/fixtures/b.graphql'
-# import { C D } from 'test/fixtures/cd.graphql'
+# import { A } from './a.graphql'
+# import { B } from './b.graphql'
+# import { C D } from './cd.graphql'
 
 type Complex  {
   id: ID!
