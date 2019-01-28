@@ -13,12 +13,25 @@ yarn add --dev graphql-import-loader
 
 ## Usage
 
-Resolve GraphQL file import statements as a string. See the tests for more details
+Resolve GraphQL file import statements with relative paths. See the tests for more details
+
+```
+.
+├── src
+│   ├── index.js
+│   └── schema
+│       ├── a.graphql
+│       ├── b.graphql
+│       ├── main.graphql
+│       └── subdir
+│           └── cd.graphql
+└── webpack.config.js
+```
 
 ```graphql
-# import { A } from 'src/schema/a.graphql'
-# import { B } from 'src/schema/b.graphql'
-# import { C, D } from 'src/schema/cd.graphql'
+# import { A } from './a.graphql'
+# import { B } from './b.graphql'
+# import { C, D } from './subdir/cd.graphql'
 
 type Complex  {
   id: ID!
@@ -30,7 +43,7 @@ type Complex  {
 ```
 
 ```js
-import typeDefs from './schema.graphql'
+import typeDefs from './schema/main.graphql'
 ```
 
 ```js
