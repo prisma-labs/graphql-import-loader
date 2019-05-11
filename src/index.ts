@@ -1,9 +1,14 @@
-import { importSchema } from 'graphql-import'
+import { importSchema, parseSDL } from 'graphql-import'
+import { dirname, resolve } from 'path'
 
-export default function(source) {
+export default function (source) {
   const callback = this.async();
 
-  this.cacheable()
+  this.cacheable();
 
-  callback(null, `module.exports = \`${importSchema(source).replace(/`/g, '\\`')}\``)
+  parseSDL(source).forEach(rawModule => {
+    this.addDependency(resolve(dirname(this.resourcePath), rawModule.from));
+  });
+
+  callback(null, `module.exports = \`${importSchema(this.resourcePath).replace(/`/g, '\\`')}\``);
 }
