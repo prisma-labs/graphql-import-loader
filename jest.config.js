@@ -10,5 +10,6 @@ module.exports = {
     "js",
     "ts",
     "node"
-  ]
+  ],
+  "testEnvironment": "node"
 }
